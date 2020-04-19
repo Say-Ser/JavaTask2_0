@@ -19,26 +19,59 @@ public class Calc {
     public static float Umn(float x,float y){
         return x * y;
     }
-
-    public static void main(String[] args) {
+    public static float Calculator(){
         Scanner in= new Scanner(System.in);
         System.out.println("Введите первое число: ");
-        float First=in.nextFloat();
+        float first=in.nextFloat();
         System.out.println("Введите второе число: ");
-        float Second=in.nextFloat();
+        float second=in.nextFloat();
         System.out.println("Введите операцию: ");
         System.out.println("1 - сумма");
         System.out.println("2 - разность");
         System.out.println("3 - деление");
         System.out.println("4 - умножение");
-        int Operation = in.nextInt();
-        switch (Operation){
-            case 1:System.out.println(Sum(First,Second));break;
-            case 2:System.out.println(Min(First,Second));break;
-            case 3:System.out.println(Del(First,Second));break;
-            case 4:System.out.println(Umn(First,Second));break;
+        int operation = in.nextInt();
+        float result;
+        switch (operation){
+            case 1:
+                result=Sum(first,second);break;
+            case 2:
+                result=Min(first,second);break;
+            case 3:
+                result=Del(first,second);break;
+            case 4:
+                result=Umn(first,second);break;
             default:
-                System.out.println("Некорректная операция!");
+                System.out.println("Некорректная операция!");return 0;
         }
+        return result;
     }
+    private static String FindMaxWordOfMassiv() {
+
+        return null;
+    }
+
+
+    public static void main(String[] args) {
+        Scanner in= new Scanner(System.in);
+        System.out.println("Введите номер программы, которую хотите запустить: ");
+        System.out.println("1 - Калькулятор");
+        System.out.println("2 - Поиск максимального слова в массиве");
+        int number = in.nextInt();
+        switch (number){
+            case 1:
+                System.out.println("Результат выполнения программы Калькулятор:"+Calculator());
+                break;
+            case 2:
+                System.out.println("Максимальное слово в массиве:"+FindMaxWordOfMassiv());
+                break;
+            default:
+                System.out.println("Введен несуществующий номер, До свидания!");
+        }
+        
+
+
+    }
+
+
 }
