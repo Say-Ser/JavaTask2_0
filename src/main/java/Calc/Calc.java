@@ -1,5 +1,7 @@
 package Calc;
 
+import java.util.Scanner;
+
 public class Calc {
 /** Класс Калькулятор
  * */
@@ -18,17 +20,23 @@ public class Calc {
         return x * y;
     }
 
-
-
     public static void main(String[] args) {
-        float x=5.2f;
-        float y=2.5f;
-        int C=2;
-        switch (C){
-            case 1:System.out.println(Sum(x,y));break;
-            case 2:System.out.println(Min(x,y));break;
-            case 3:System.out.println(Del(x,y));break;
-            case 4:System.out.println(Umn(x,y));break;
+        Scanner in= new Scanner(System.in);
+        System.out.println("Введите первое число: ");
+        float First=in.nextFloat();
+        System.out.println("Введите второе число: ");
+        float Second=in.nextFloat();
+        System.out.println("Введите операцию: ");
+        System.out.println("1 - сумма");
+        System.out.println("2 - разность");
+        System.out.println("3 - деление");
+        System.out.println("4 - умножение");
+        int Operation = in.nextInt();
+        switch (Operation){
+            case 1:System.out.println(Sum(First,Second));break;
+            case 2:System.out.println(Min(First,Second));break;
+            case 3:System.out.println(Del(First,Second));break;
+            case 4:System.out.println(Umn(First,Second));break;
             default:
                 System.out.println("Некорректная операция!");
         }
