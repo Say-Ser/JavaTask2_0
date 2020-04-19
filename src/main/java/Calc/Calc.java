@@ -2,9 +2,13 @@ package Calc;
 
 import java.util.Scanner;
 
+
 public class Calc {
 /** Класс Калькулятор
+ * Класс включает в себя решения задач с 1 по 3 по курсу Java 2.0. для тестировщиков
  * */
+
+
 
     /*Методы*/
     public static float Sum(float x,float y){
