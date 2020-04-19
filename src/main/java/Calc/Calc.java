@@ -47,8 +47,36 @@ public class Calc {
         return result;
     }
     private static String FindMaxWordOfMassiv() {
+        Scanner in= new Scanner(System.in);
+        int max=0;
+        String maxWord = null;
+        System.out.println("Введите размерность массива: ");
+        int size = in.nextInt();
+        System.out.println(size);
+        String [] words = new String[size];
+        System.out.println("Введите элементы массива: ");
+        for (int i=0; i< words.length;i++)
+        {
+            words[i]=in.next();
+        }
+        System.out.println("Ваш массив: ");
 
-        return null;
+        for (String word : words)
+        {
+            if (word.length()>max)
+            {
+                max=word.length();
+                maxWord=word;
+            }
+        }
+
+        for (String word : words)
+        {
+           System.out.print(word+" ");
+        }
+        System.out.println(" ");
+
+        return maxWord;
     }
 
 
@@ -63,7 +91,7 @@ public class Calc {
                 System.out.println("Результат выполнения программы Калькулятор:"+Calculator());
                 break;
             case 2:
-                System.out.println("Максимальное слово в массиве:"+FindMaxWordOfMassiv());
+                System.out.println("Максимальное слово в массиве: "+FindMaxWordOfMassiv());
                 break;
             default:
                 System.out.println("Введен несуществующий номер, До свидания!");
