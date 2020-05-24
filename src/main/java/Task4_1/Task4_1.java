@@ -6,8 +6,13 @@ package Task4_1;
  */
 public class Task4_1 {
     public static void main(String[] args) {
+       /*
+       indexMin - индекс максимального отрицательного элемента
+       indexMax - индекс минимального положительного элемента
+        */
         int indexMin=0;
         int indexMax=0;
+        //Пороги максимума и минимума чисел массива
         int min=11;
         int max=-11;
         int [] mass = new int[20];
