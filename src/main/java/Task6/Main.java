@@ -1,3 +1,6 @@
+/**
+ * @author Sayapin S.V.
+ */
 package Task6;
 import java.io.IOException;
 import java.nio.file.Files;
