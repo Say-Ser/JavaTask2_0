@@ -1,3 +1,8 @@
+/**
+ * @author Sayapin S.V.
+ */
+
+
 package Task4_2;
 import java.util.Scanner;
 import java.util.ArrayList;
