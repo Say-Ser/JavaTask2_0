@@ -1,16 +1,22 @@
+/** Класс Калькулятор
+ * Класс включает в себя решения задач с 1 по 3 по курсу Java 2.0. для тестировщиков
+ * @author Sayapin S. V.
+ * */
 package Calc;
 
 import java.util.Scanner;
 
 
 public class Calc {
-/** Класс Калькулятор
- * Класс включает в себя решения задач с 1 по 3 по курсу Java 2.0. для тестировщиков
- * */
 
-
-
-    /*Методы*/
+    /*Методы
+    * Sum - функция сложения двух чисел
+    * Min - функция сложения двух чисел
+    * Del - функция сложения двух чисел
+    * Umn - функция сложения двух чисел
+    * Calculator - метод реализующий одну из операций (Сложение, Вычитание, Умножение и Деление), над двумя числами с плавающей точкой
+    * FindMaxWordOfMassiv - метод реализующий поиск слова максимальной длины в массиве слов, заданной пользователем размерностью
+     * */
     public static float Sum(float x,float y){
         return x + y;
     }
@@ -25,15 +31,19 @@ public class Calc {
     }
     public static float Calculator(){
         Scanner in= new Scanner(System.in);
+        System.out.println("Примечание: если число имеет дробную часть, просьба отделять ее запятой. ");
         System.out.println("Введите первое число: ");
+        //first - первое число
         float first=in.nextFloat();
         System.out.println("Введите второе число: ");
+        //second - второе число
         float second=in.nextFloat();
         System.out.println("Введите операцию: ");
         System.out.println("1 - сумма");
         System.out.println("2 - разность");
         System.out.println("3 - деление");
         System.out.println("4 - умножение");
+        // operation - выбор операции над числами
         int operation = in.nextInt();
         float result;
         switch (operation){
@@ -92,7 +102,7 @@ public class Calc {
         int number = in.nextInt();
         switch (number){
             case 1:
-                System.out.println("Результат выполнения программы Калькулятор:"+Calculator());
+                System.out.printf("Результат выполнения программы Калькулятор: %.4f ",Calculator());
                 break;
             case 2:
                 System.out.println("Максимальное слово в массиве: "+FindMaxWordOfMassiv());
@@ -100,10 +110,8 @@ public class Calc {
             default:
                 System.out.println("Введен несуществующий номер, До свидания!");
         }
-        
 
 
     }
-
-
+    
 }
